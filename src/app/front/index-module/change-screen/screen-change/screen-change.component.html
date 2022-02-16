@@ -1,0 +1,50 @@
+<div class="page-title-container">
+    <div class="page-title">
+        <div class="container">
+            <h1 class="entry-title"></h1>
+        </div>
+    </div>
+    <ul class="breadcrumbs">
+        <li><a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a></li>
+        <li class="active">CHANGE SCREEN NAME</li>
+    </ul>
+</div>
+<section id="content">
+    <div class="container">
+        <div class="col-sm-3 box"></div>
+        <div class="col-sm-6 box animated bounceInLeft fadeIn "
+            style="animation-duration: 1s; visibility: visible;display:block ;" id="loginhide">
+            <div class="">
+                <form [formGroup]="changeName" (ngSubmit)="changeScreen()">
+                    <div class="">
+                        <input type="hidden" name="" id="" value="">
+                    </div>
+                    <div class="">
+                        <input type="hidden" name="" id="" value="">
+                    </div>
+                    <div>
+                        <div class="col-sm-12 box animated bounceInLeft" data-animation-type="bounceInLeft card-b-shdow"
+                            style="animation-duration: 1s; visibility: visible;display:block ;" id="registershow">
+                            <div class="text-box newsletter-box">
+                                <h3 class="color-white custom-font2">CHANGE NICK NAME</h3>
+                                <p id="regmsg" class="errmsg">
+                                    {{err.err?err.err:""}}
+                                    {{err.msg?err.msg:""}}
+                                </p>
+                                <div class="form-group">
+                                    <input type="text" formControlName="screen_name"
+                                        class="input-text full-width owntyps" placeholder="" value="user12345">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" id="restemail" class="btn style4 checkemail">UPDATE</button>
+                                </div>
+
+                                <img src="assets/images/locks.png" alt=""><br>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

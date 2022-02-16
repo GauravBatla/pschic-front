@@ -1,0 +1,166 @@
+<div id="page-wrapper">
+    <!-- <?php include("include/header.php"); ?> -->
+    <div class="page-title-container">
+        <div class="page-title">
+            <div class="container">
+                <h1 class="entry-title">USER CART</h1>
+            </div>
+        </div>
+        <ul class="breadcrumbs">
+            <li><a href="index.php">Home</a></li>
+            <li class="active">USER CART</li>
+        </ul>
+    </div>
+    <section id="content">
+        <div class="container">
+            <div class="woocommerce">
+                <form>
+                    <table class="shop_table cart box-sm">
+                        <thead>
+                            <tr>
+                                <th class="product-remove">&nbsp;</th>
+                                <th class="product-thumbnail">&nbsp;</th>
+                                <th class="product-name">Products</th>
+                                <th class="product-price">Price</th>
+                                <th class="product-quantity">Quantity</th>
+                                <th class="product-subtotal">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of data" class="cart_item">
+                                <td class="product-remove">
+                                    <a (click)="remove(item.id)"><i class="fa fa-times"></i></a>
+                                </td>
+                                <td class="product-thumbnail">
+                                    <a href="#" class="attachment-shop_thumbnail wp-post-image"><img
+                                            src="http://localhost:4000/static/{{item.image}}" alt=""></a>
+                                </td>
+                                <td class="product-name">
+                                    <a href="#!"> {{item.product_name}} </a>
+                                </td>
+                                <td class="product-price">
+                                    <span class="amount">$${{item.price}}</span>
+                                </td>
+                                <td class="product-quantity">
+                                    <a href=""> <i class="fa fa-minus"></i></a>
+                                    <input type="text" size="4" class="input-text qty text" disabled title="item.qty"
+                                        value="{{item.qty}}" name="">
+                                    <a href=""> <i class="fa fa-plus"></i></a>
+                                </td>
+                                <td class="product-subtotal">
+                                    <span class="amount">${{item.total}}</span>
+                                </td>
+                            </tr>
+                            <!-- <tr class="cart_item">
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa fa-times"></i></a>
+                                </td>
+                                <td class="product-thumbnail">
+                                    <a href="#" class="attachment-shop_thumbnail wp-post-image"><img
+                                            src="assets/img/products-img/Mahalakshmi_Yantra.jpg" alt=""></a>
+                                </td>
+                                <td class="product-name">
+                                    <a href="#!">Mahalakshmi Yantra</a>
+                                </td>
+                                <td class="product-price">
+                                    <span class="amount">$220</span>
+                                </td>
+                                <td class="product-quantity">
+                                    <input type="text" size="4" class="input-text qty text" title="Qty" value="1"
+                                        name="">
+                                </td>
+                                <td class="product-subtotal">
+                                    <span class="amount">$220</span>
+                                </td>
+                            </tr>
+                            <tr class="cart_item">
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa fa-times"></i></a>
+                                </td>
+                                <td class="product-thumbnail">
+                                    <a href="#" class="attachment-shop_thumbnail wp-post-image"><img
+                                            src="assets/img/products-img/Mahalakshmi_Yantra.jpg" alt=""></a>
+                                </td>
+                                <td class="product-name">
+                                    <a href="#!">Mahalakshmi Yantra</a>
+                                </td>
+                                <td class="product-price">
+                                    <span class="amount">$220</span>
+                                </td>
+                                <td class="product-quantity">
+                                    <input type="text" size="4" class="input-text qty text" title="Qty" value="1"
+                                        name="">
+                                </td>
+                                <td class="product-subtotal">
+                                    <span class="amount">$220</span>
+                                </td>
+                            </tr> -->
+                            <tr>
+                                <td class="actions" colspan="6">
+                                    <div class="coupon">
+                                        <input placeholder="Enter coupon code" value="" id="coupon_code"
+                                            class="input-text" name="coupon_code">
+                                        <button name="apply_coupon" class="btn btn-medium style2">Apply</button>
+                                    </div>
+                                    <button class="btn btn-medium style2">Update Cart</button>
+                                    <button class="btn btn-medium style1">Proceed to Checkout</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <div class="cart-collaterals row">
+                    <form class="shipping_calculator col-sm-6 col-md-6 box">
+                        <h4>Calculate Shipping</h4>
+                        <div class="form-group dropdown">
+                            <select class="selector full-width hasCustomSelect"
+                                style="appearance: menulist-button; width: 570px; position: absolute; opacity: 0; height: 42px; font-size: 12.9996px;">
+                                <option value="">Select a Country</option>
+                            </select>
+                            <span class="customSelect selector full-width" style="display: inline-block;"><span
+                                    class="customSelectInner" style="width: 530px; display: inline-block;">Select a
+                                    Country</span></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="input-text full-width" placeholder="State/County">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="input-text full-width" placeholder="Post Code / Zip">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-medium style1">Update Totals</button>
+                        </div>
+                    </form>
+                    <div class="cart_totals col-sm-offset-7 col-md-offset-8 clearfix box">
+                        <div class="col-xs-12">
+                            <h4>Cart Totals</h4>
+                            <table>
+                                <tbody>
+                                    <tr class="cart-subtotal">
+                                        <th>Cart Subtotal</th>
+                                        <td><span class="amount">$118.57</span></td>
+                                    </tr>
+                                    <tr class="shipping">
+                                        <th>Shipping</th>
+                                        <td>
+                                            Free Shipping
+                                            <input type="hidden" class="shipping_method" value="free_shipping"
+                                                id="shipping_method_0" data-index="0" name="shipping_method[0]">
+                                        </td>
+                                    </tr>
+                                    <tr class="tax">
+                                        <th>Tax</th>
+                                        <td>$15.00</td>
+                                    </tr>
+                                    <tr class="order-total">
+                                        <th>Order Total</th>
+                                        <td><span class="amount">$133.57</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

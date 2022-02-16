@@ -1,0 +1,118 @@
+<div class="page-title-container">
+    <div class="page-title">
+        <div class="container">
+            <h1 class="entry-title">Get Personal details</h1>
+        </div>
+    </div>
+    <ul class="breadcrumbs">
+        <li><a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a></li>
+        <li class="active">Personal details</li>
+    </ul>
+</div>
+<section id="content">
+    <div class="section" style="padding: 11px 0px 0px;">
+        <div class="container">
+            <div id="main">
+                <div class="row">
+                    <div id="userscreen" class="col-sm-3">
+                        <div class="icon-box style-side-3 box disply-css">
+                            <i class="fa fa-user"></i>
+                            <h4 class="box-title"><a [routerLink]="['/changeScreen']"
+                                    routerLinkActive="router-link-active">NICK NAME</a></h4>
+                            <div class="box-content">
+                                <p>Your current Nick name is <strong style="color:#ff6600;">user3737987</strong>. you
+                                    are known by your Nick name on this websie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="icon-box style-side-3 box disply-css">
+                            <i class="fa fa-lock"></i>
+                            <h4 class="box-title"><a [routerLink]="['/changepassword']"
+                                    routerLinkActive="router-link-active">CHANGE PASSWORD</a></h4>
+                            <div class="box-content">
+                                <p>To setup new passord use change Password link. Your current password was sent on your
+                                    email. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="icon-box style-side-3 box disply-css">
+                            <i class="fa fa-envelope"></i>
+                            <h4 class="box-title"><a [routerLink]="['/changeEmail']" routerLinkActive="router-link-active" >REGISTERED EMAIL</a></h4>
+                            <div class="box-content">
+                                <p>Use this option to change your Registered Email. Your current Registered Email is
+                                    <strong style="color:#ff6600;"><span
+                                            id="emailval">bikasharma1991@gmail.com</span></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="icon-box style-side-3 box disply-css">
+                            <i class="fa fa-camera"></i>
+                            <h4 class="box-title"><a href="#!" class="sample_input"> PROFILE PICTURE</a></h4>
+                            <div class="box-content">
+                                <p>Use this option to change Display Profile Picture. Only Approved DP is visible on
+                                    website.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section you-aap">
+        <div class="container">
+            <div class="heading-box">
+                <h2 class="box-title">YOUR <strong class="text-primary">DP</strong> APPROVAL</h2>
+            </div>
+            <div class="row">
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <div class="team-member style-default card-sh-css">
+                        <div class="image-container">
+                            <img src="assets/img/icons/current-dp.svg" alt="">
+                        </div>
+                        <div class="team-member-author">
+                            <h4 class="team-member-name text-fff">Current Display DP</h4>
+                            <span class="team-member-job text-fff">No Date Here</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <div class="team-member style-default card-sh-css">
+                        <div class="image-container">
+                            <img src="assets/img/icons/Waiting-dp.svg" alt="">
+                        </div>
+                        <div class="team-member-author">
+                            <h4 class="team-member-name text-fff">Waiting for approval DP</h4>
+                            <span class="team-member-job text-fff">No Date Here</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <div class="team-member style-default card-sh-css">
+                        <div class="image-container">
+                            <img src="assets/img/icons/rej-dp.svg" alt="">
+                        </div>
+                        <div class="team-member-author">
+                            <h4 class="team-member-name text-fff">Rejected DP</h4>
+                            <span class="team-member-job text-fff">No Date Here</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <div class="team-member style-default card-sh-css">
+                        <div class="image-container">
+                            <img src="assets/img/icons/approve-dp.svg" alt="">
+                        </div>
+                        <div class="team-member-author">
+                            <h4 class="team-member-name text-fff">Approved DP</h4>
+                            <span class="team-member-job text-fff">No Date Here</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

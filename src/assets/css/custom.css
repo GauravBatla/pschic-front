@@ -1,0 +1,340 @@
+/*
+ * Title:   Custom Style File
+ * Author:  http://themeforest.net/user/soaptheme 
+ */
+ .text-box{
+    background: #1b4268;
+}
+.btn.style4 {
+    background: 0 0;
+    border: 1px solid #d4dde5;
+    color: inherit; 
+}
+.card-b-shdow{
+   border-radius: 7px !important;
+    box-shadow: 0px 0px 1px 1px #dbdbdb;
+    padding: 15px;
+}
+.owntyps{
+    border-radius: 6px;
+}
+.btn.style4.active, .btn.style4:active, .btn.style4:focus, .btn.style4:hover {
+    color: #fff;
+    border-color: #f60;
+    background: #f60;
+}
+.styfont{
+    font-family:verdana;
+     font-size:12px; 
+     color:#ff6600;
+}
+.sty1-css{
+    border-radius: 5px;
+    box-shadow: 1px 0px 1px 1px #000;
+}
+.jen-luss{
+    font-size: 21px;
+    font-weight: 700;
+}
+.bbsgsj{
+    background: #ededed;
+}
+ 
+.newmailcss{
+    padding-top: 104px !important;
+    padding-bottom: 100px !important;
+    background: #e9e8e8;
+}
+ .caption-wrapper1.style3a .captions1 {
+    background: rgb(255 193 7 / 58%);
+    position: absolute;
+    padding: 11px 12px 0;
+    z-index: 200;
+    max-width: 329px;
+    bottom: 30px;
+    left: 17px;
+    width: 100%;
+    font-size: 1.6666em;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+.post-cmt{
+    border: 1px solid;
+    padding: 23px;
+    background: darkgray;
+    box-shadow: 2px 0px 0px 0px #000;
+}
+.card-sh-adv{
+    box-shadow: 2px 2px 2px #ddd;
+    padding: 4px;
+}
+.box-sfrse{
+    box-shadow: 0px 0px 1px 1px #006025;
+    background: cadetblue;
+}
+.tems-ploi{
+    box-shadow: 2px 2px 2px 2px #ddd;
+    padding: 10px !important;
+}
+
+/*online status*/
+.circle {
+  width: 12px;
+    display: inline-block;
+    /*height: 12px;*/
+    z-index: 2;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0bb512;
+}
+
+.Gold {
+  background: #4caf50;
+}
+
+.Bronze {
+  background-image: linear-gradient(to bottom, #e8c1ad, #cd8d75);
+}
+
+.Silver {
+  background-image: linear-gradient(to bottom, #cbcbcb, #9b9b9b);
+}
+.colpsse{
+    margin-top: 10px;
+    border-radius: 6px !important;
+    box-shadow: 0px 1px 1px 0px #ddd;
+}
+.inner {
+   position: absolute;
+    width: 12px;
+    z-index: 1;
+    display: inline-block;
+    left: 6px;
+    top: 5px;
+    height: 12px;
+    animation: fade 1.3s infinite;
+    box-shadow: 0 0 0px 0px #32bd37;
+    border-radius: 50%;
+}
+
+.state__container {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  margin: 0px;
+}
+
+@keyframes fade {
+  to {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
+
+/*online statusend*/
+
+
+
+.won-time{
+    font-size: 79px !important;
+    font-weight: 700;
+    text-shadow: 2px 4px 0px #16110e;
+}
+.special__tabcss{
+    background: #ff6600 !important;
+}
+.sect-idd{
+    margin-top: 13px;
+}
+.yo-text{
+    color: #ff6600;
+    font-weight: 900;
+    text-decoration: underline;
+}
+.boxx-tags{
+    border: 1px solid;
+    box-shadow: 2px 2px 0px 2px;
+}
+.pro-dss{
+    box-shadow: 2px 3px 0px 2px #d7d7d7;
+}
+.bootom-sliders{
+    margin-top: 7px;
+}
+.leftt{
+    margin-left: 5px;
+    box-shadow: 2px 2px 2px;
+}
+ .yogi__css{
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+ }
+ .pcss{
+    font-size: 15px;
+    color: #000;
+    margin-top: 15px;
+    text-align: justify;
+ }
+
+
+
+
+.balance-details {
+    background: #f60;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 7px;
+    box-shadow: 2px 3px 1px 1px #e06f00;
+}
+.buy-min{
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #ddd;
+}
+.balance-details h2 {
+    border: none;
+    margin: 0!important;
+    color: #fff;
+    text-align: left;
+    font-size: 56px;
+    padding: 0;
+}
+.balance-details p {
+    font-size: 14px;
+    text-align: left;
+    color: #fff;
+    margin: 5px 0 5px 0;
+}
+.setting-css{
+    padding: 38px;
+    background: #ddd;
+    box-shadow: 0px 1px 0px 2px #f17474;
+}
+.transection-type h3 {
+    margin: 0;
+    font-size: 40px!important;
+    padding: 20px 0;
+    font-weight: 100!important;
+    border-bottom: 3px solid #1b4268;
+    margin-bottom: 20px!important;
+    text-align: left;
+}
+
+
+.disply-css{
+    border-bottom: 1px solid #000;
+}
+.card-sh-css{
+    border: 1px solid #e06f00;
+    box-shadow: 2px 3px 4px 3px #ddd;
+}
+.you-aap{
+    background: #f7f7f7;
+}
+
+.unknow__btn{
+	background: none !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+}
+.bg-sty_css{
+	background: #d86d05;
+    padding: 0px 0px 10px 0px;
+}
+.coy__css{
+	margin-top: 14px;
+    color: antiquewhite;
+    font-weight: 600;
+}
+.call_action{
+	      padding: 22px 3px 10px !important;
+}
+.mg__top{
+	margin-top: 13px;
+}
+.box-hsd{
+	box-shadow: 1px 1px 1px 1px #f9aa66;
+    border-radius: 6px;
+}
+.text-white{
+	color: #fff;
+}
+.custom__box{
+	padding: 24px 19px 14px 19px !important;
+}
+.imp__links{
+	    font-family: -webkit-pictograph;
+}
+.alert-shdow{
+	box-shadow: 2px 2px 2px 2px #1a1a19;
+    border-radius: 6px;
+}
+.card-shd{
+	border: 4px solid #f7f6f6;
+    box-shadow: 1px 2px 2px 2px #999;
+    padding: 4px;
+    background: #e06f00;
+}
+.bro-experts{
+	    border-radius: inherit;
+    box-shadow: 1px 1px 0px 2px #fb942f;
+}
+.get-more__css{
+	background: inherit !important;
+    /*border: 1px solid; */
+}
+
+.cutom__csrdcss{
+	 /*   background: aliceblue;
+    padding: 25px;*/
+}
+.astro__csss{
+	background: #c9b2b0;
+    padding: 13px;
+    margin-top: 1px;
+    border-radius: 10px;
+    border-top: dotted;
+    border-left: solid #f60;
+}
+.feature_experts{
+	border: 0px solid #000;
+    box-shadow: 2px 2px 2px 2px #ddd; 
+}
+.text-fff{
+	color: #fff !important;
+}
+.view-more-css{
+	background: #8bc34a;
+    padding: 5px;
+}
+.bg-boxds{
+	margin-bottom: -18px;
+    margin-top: -22px;
+}
+.btn-cut-sty{
+	box-shadow: 2px 2px 1px #040e018c !important;
+    background: inherit !important;
+    color: #000 !important;
+    border: 1px solid #505050 !important;
+    border-radius: inherit !important;
+}
+.ofb-css{
+	    padding-top: 42px;
+    padding-bottom: 18px;
+}
+.dummy__text{
+	font-size: 20px !important;
+    text-shadow: inherit !important;
+    color: #ffffff !important;
+    font-family: sans-serif;
+    font-weight: 300 !important;
+}
+
+
