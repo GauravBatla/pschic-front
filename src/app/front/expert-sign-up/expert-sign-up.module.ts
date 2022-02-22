@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BuyTimepackRoutingModule } from './buy-timepack-routing.module';
-import { ItimepacksComponent } from './itimepacks/itimepacks.component';
+import { ExpertSignUpRoutingModule } from './expert-sign-up-routing.module';
+import { ExpertSignComponent } from './expert-sign/expert-sign.component';
 import { AngularMaterialUi } from 'src/angular-material/angular.material.module';
 
 
 @NgModule({
   declarations: [
-    ItimepacksComponent
+    ExpertSignComponent
   ],
   imports: [
     CommonModule,
-    BuyTimepackRoutingModule,
+    ExpertSignUpRoutingModule,
     AngularMaterialUi,
 
   ]
 })
-export class BuyTimepackModule { }
+export class ExpertSignUpModule { }

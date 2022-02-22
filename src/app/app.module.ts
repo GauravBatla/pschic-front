@@ -15,6 +15,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { LiveChatComponent } from './components/live-chat/live-chat.component';
 import { PayComponent } from './pay/pay.component';
 // import { ChatUsComponent } from './chat-us/chat-us.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -42,10 +43,12 @@ import { PayComponent } from './pay/pay.component';
 
   ],
   providers: [
+    CookieService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
-      multi: true
+      multi: true,
+
     }
   ],
   bootstrap: [AppComponent]

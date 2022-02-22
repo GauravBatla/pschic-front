@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MyBankRoutingModule } from './my-bank-routing.module';
 import { BankAccountComponent } from './bank-account/bank-account.component';
+import { AngularMaterialUi } from 'src/angular-material/angular.material.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { BankAccountComponent } from './bank-account/bank-account.component';
   ],
   imports: [
     CommonModule,
-    MyBankRoutingModule
+    MyBankRoutingModule,
+    AngularMaterialUi,
   ]
 })
 export class MyBankModule { }

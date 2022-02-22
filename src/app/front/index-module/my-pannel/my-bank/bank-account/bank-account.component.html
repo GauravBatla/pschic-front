@@ -1,51 +1,85 @@
 <div class="page-title-container">
-    <div class="page-title">
-       <div class="container">
-          <h1 class="entry-title">My Bank</h1>
-       </div>
-    </div>
-    <ul class="breadcrumbs">
-       <li><a href="index.php">Home</a></li>
-       <li class="active">My Bank</li>
-    </ul>
- </div>
- <section id="content">
-    <div class="section" style="padding: 11px 0px 0px;">
-       <div class="container">
-          <div id="main">
-             <div class="row">
-                <div class="col-sm-12">
-                   <div class="transection-type testimonial  ">
-                      <h3 class="testimonial-content">Accounts Activity</h3>
-                      <div class="balance-details">
-                         <div class="col-sm-12">
-                            <h2> Balance : <span class="pull-right">$0.00</span></h2>
-                            <p> Reserved Funds:<span class="pull-right">$0.00 <a href="">Learn More</a></span></p>
-                         </div>
-                      </div>
-                      <div class="col-sm-12">
-                         <div id="body_derror"></div>
-                         <div class="col-sm-2 no-lpadding reponcive-no-padding form-group no-column-bottom-margin">
-                            <select name="ctl00$body$lstTrans" id="body_lstTrans" class="selector full-width text-left hasCustomSelect" style="appearance: menulist-button; width: 170px; position: absolute; opacity: 0; height: 28px; font-size: 9.9996px;">
-                               <option selected="selected" value="All">All Transaction</option>
-                               <option value="Session">Session</option>
-                               <option value="Deposit">Deposit</option>
-                               <option value="Refund">Refund</option>
-                            </select>
-                            <span class="customSelect selector full-width text-left hasCustomSelect" style="display: inline-block;"><span class="customSelectInner" style="width: 128px; display: inline-block;">All Transaction</span></span>
-                         </div>
-                         <div class="col-sm-4 no-lpadding reponcive-no-padding form-group no-column-bottom-margin">
-                            <input name="" type="date" id="" class="datepicker full-width input-text important-f" value="1/11/2022">
-                         </div>
-                         <div class="col-sm-4 reponcive-no-padding form-group no-column-bottom-margin">
-                             <input name="" type="date" id="" class="datepicker full-width input-text important-f" value="1/11/2022">
-                         </div>
-                         <div class="col-sm-2 reponcive-no-padding update-btn"><a id="body_submit" name="submit" type="submit" class="btn style4 btn-block" href="javascript:__doPostBack('ctl00$body$submit','')">Search</a></div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
- </section>
+   <div class="page-title">
+      <div class="container">
+         <h1 class="entry-title">My Bank</h1>
+      </div>
+   </div>
+   <ul class="breadcrumbs">
+      <li><a href="index.php">Home</a></li>
+      <li class="active">My Bank</li>
+   </ul>
+</div>
+<section id="content">
+   <div class="section" style="padding: 11px 0px 0px;">
+      <div class="container">
+         <div id="main">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="transection-type testimonial  ">
+                     <h3 class="testimonial-content">Accounts Activity</h3>
+                     <div class="balance-details">
+                        <div class="col-sm-12">
+                           <h2> Balance : <span class="pull-right">$ {{balance}} </span></h2>
+                           <p> Reserved Funds:<span class="pull-right">$0.00 <a href="">Learn More</a></span></p>
+                        </div>
+                     </div>
+                     <div class="col-sm-12">
+                        <div id="body_derror"></div>
+                        <form [formGroup]="transForm" (ngSubmit)="getTransaction()" >
+                           <div class="col-sm-2 no-lpadding reponcive-no-padding form-group no-column-bottom-margin">
+                              <select name="ctl00$body$lstTrans" id="body_lstTrans" formControlName="type"
+                                 class="selector full-width text-left hasCustomSelect"
+                                 style="appearance: menulist-button; width: 170px; position: absolute; opacity: 0; height: 28px; font-size: 9.9996px;">
+                                 <option selected="selected"  value="All">All Transaction</option>
+                                 <option value="Session">Session</option>
+                                 <option value="Deposit">Deposit</option>
+                                 <option value="Refund">Refund</option>
+                              </select>
+                              <span class="customSelect selector full-width text-left hasCustomSelect"
+                                 style="display: inline-block;"><span class="customSelectInner"
+                                    style="width: 128px; display: inline-block;">All Transaction</span></span>
+                           </div>
+                           <div class="col-sm-4 no-lpadding reponcive-no-padding form-group no-column-bottom-margin">
+                              <input formControlName="tdate1" name="" type="date" id="" class="datepicker full-width input-text important-f"
+                                 value="1/11/2022">
+                           </div>
+                           <div class="col-sm-4 reponcive-no-padding form-group no-column-bottom-margin">
+                              <input name="" type="date" formControlName="tdate2" id="" class="datepicker full-width input-text important-f"
+                                 value="1/11/2022">
+                           </div>
+                           <div class="col-sm-2 reponcive-no-padding update-btn">
+                              <!-- <a id="body_submit" name="submit"
+                                 type="submit" class="btn style4 btn-block">Search</a> -->
+                                 <input type="submit" class="btn style4 btn-block" value="Search">
+                           </div>
+                        </form>
+                        <table *ngIf="show" class="table table-hover">
+                           <thead>
+                              <tr>
+                                 <th>Transaction Type</th>
+                                 <th>Payment mode</th>
+                                 <th>Transaction Id.</th>
+                                 <th>Transaction Date</th>
+                                 <th>Transaction Amt.</th>
+                                 <th>Expert Name</th>
+                              </tr>
+                           </thead>
+                           <tr *ngFor="let item of data"> 
+                              <td> {{item.typeoftrans}} </td>
+                              <td> {{item.payThrough}} </td>
+                              <td> {{item.paypalid}}</td>
+                              <td> {{item.tdate}} </td>
+                              <td> {{item.tAmt}}</td>
+                              <td> {{item.ex_screen}} </td>
+                           </tr>
+                           <tbody>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

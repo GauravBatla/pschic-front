@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BuyMinutesRoutingModule } from './buy-minutes-routing.module';
 import { GetMinutesComponent } from './get-minutes/get-minutes.component';
+import { AngularMaterialUi } from 'src/angular-material/angular.material.module';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { GetMinutesComponent } from './get-minutes/get-minutes.component';
   ],
   imports: [
     CommonModule,
-    BuyMinutesRoutingModule
+    BuyMinutesRoutingModule,
+    AngularMaterialUi,
+
   ]
 })
 export class BuyMinutesModule { }

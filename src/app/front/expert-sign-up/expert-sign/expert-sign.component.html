@@ -1,0 +1,265 @@
+<div class="page-title-container">
+    <div class="page-title">
+        <div class="container">
+            <h1 class="entry-title">Experts Signup</h1>
+        </div>
+    </div>
+    <ul class="breadcrumbs">
+        <li><a href="index.php">Home</a></li>
+        <li class="active">Experts Signup</li>
+    </ul>
+</div>
+
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 visible-mobile">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">FAQ AND
+                    HELP - Click to open or close</button>
+                <div id="demo" class="collapse colpsse">
+                    <table class="table table-bordered">
+                        <thead>
+                            <th class="text-center">You get the Windows communication suit and all the updates for
+                                lifetime</th>
+                        </thead>
+                        <thead>
+                            <th class="text-center">Please check your email after payment for all rules regulations and
+                                guidelines.</th>
+                        </thead>
+                        <thead>
+                            <th class="text-center">You will also be eligible to provide audio and video services in
+                                future.</th>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="main ">
+            <div class="panel-group faqs hidden-mobile" id="faqs">
+                <div class="panel">
+                    <h3 class="panel-title">
+                        <a class="active" data-parent="#faqs" data-toggle="collapse" href="#faqs-1"><span
+                                class="open-sub"></span>FAQ AND HELP - Click to open or close</a>
+                    </h3>
+                    <div class="panel-collapse collapse in" id="faqs-1" style="height: auto;">
+                        <div class="panel-content">
+                            <div class="alert alert-general padding-0 alert-shdow">
+                                <p>You get the Windows communication suit and all the updates for lifetime</p>
+                                <span class="close"></span>
+                            </div>
+                            <div class="alert alert-general padding-0 alert-shdow">
+                                <p>Please check your email after payment for all rules regulations and guidelines.</p>
+                                <span class="close"></span>
+                            </div>
+                            <div class="alert alert-general padding-0 alert-shdow">
+                                <p>You will also be eligible to provide audio and video services in future.</p>
+                                <span class="close"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style type="text/css">
+    .alert {
+        padding: 12px 83px 12px 101px !important;
+    }
+</style>
+<style type="text/css">
+    .testimonial.style1 {
+        padding: 6px 11px 9px;
+        margin-top: 0px;
+    }
+</style>
+<section *ngIf="buyDiv" id="content">
+    <div class="section">
+        <div class="container">
+            <div class="heading-box col-md-10 col-lg-8">
+                <h2 class="box-title">We are Hiring</h2>
+                <p>Only Genuine & experienced Psychic's are invited.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- <div class="icon-box style-boxed-3">
+                        <h1 class="won-time">$500</h1>
+                        <div class="box-content testimonial style1 block">
+                            <div class="testimonial-content">
+                                Joining Fee
+                            </div>
+                            <div class="testimonial-author">
+                                <span class="testimonial-author-name"> </span> - <span
+                                    class="testimonial-author-job">Paying fee does not ensure registration. Fee will be
+                                    refunded incase you are not selected.</span><br>
+                            </div>
+                        </div>
+                        <a href="#!" class="btn btn-sm style1">Pay Fee</a>
+                    </div> -->
+                </div>
+                <div class="col-md-4">
+                    <div class="icon-box style-boxed-3">
+                        <h1 class="won-time">$500</h1>
+                        <div class="box-content testimonial style1 block">
+                            <div class="testimonial-content">
+                                Joining Fee
+                            </div>
+                            <div class="testimonial-author">
+                                <span class="testimonial-author-name"> </span> - <span
+                                    class="testimonial-author-job">Paying fee does not ensure registration. Fee will be
+                                    refunded incase you are not selected.</span><br>
+                            </div>
+                        </div>
+                        <a (click)="buy()" class="btn btn-sm style1">Pay Fee</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- <div class="icon-box style-boxed-3">
+                        <h1 class="won-time">$500</h1>
+                        <div class="box-content testimonial style1 block">
+                            <div class="testimonial-content">
+                                Joining Fee
+                            </div>
+                            <div class="testimonial-author">
+                                <span class="testimonial-author-name"> </span> - <span
+                                    class="testimonial-author-job">Paying fee does not ensure registration. Fee will be
+                                    refunded incase you are not selected.</span><br>
+                            </div>
+                        </div>
+                        <a href="#!" class="btn btn-sm style1">Pay Fee</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="exert_form" id="content">
+    <div id="main">
+        <div class="container">
+            <h1 class="text-center">We are Hiring</h1>
+            <p class="text-center">Only Genuine & experienced Psychic's are invited.</p>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>personal Details</h2>
+                </div>
+                <div class="col-sm-6">
+                    <h2 class="text-center">Address</h2>
+                </div>
+                <div class="col-md-12 col-lg-12 no-margin animated bounceInLeft fadeIn"
+                    style="animation-duration: 1s; visibility: visible;display:block ;" id="loginhide">
+                    <h5 style="color:red;"> {{msg.err?msg.err:""}} </h5>
+                    <form [formGroup]="becomeExpertForm" (ngSubmit)="becomeExpert()">
+                        <div class="row">
+                            <div class="col-sm-4 form-group">
+                                <input type="text" id="subject" formControlName="screen_name" name="subject"
+                                    class="input-text full-width" value="GauravaBathla">
+                                <span style="color: red;"
+                                    *ngIf="screen_name && screen_name.invalid &&  screen_name.touched ">Screen Name this
+                                    feild is
+                                    required</span>
+                            </div>
+                            <div class="col-sm-4 form-group">
+
+                                <div class="form-check">
+                                    <input class="form-check-input" formControlName="screen_check" type="checkbox"
+                                        value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Name will be Dthis feild isable to edit in future.
+                                    </label>
+                                    <span style="color: red;"
+                                        *ngIf="screen_check && screen_check.invalid &&  screen_check.touched "> this
+                                        feild is
+                                        required</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <input type="text" id="subject" formControlName="Address" name="subject"
+                                    class="input-text full-width" placeholder="Appartment unite etc.">
+                                <span style="color: red;" *ngIf="Address && Address.invalid &&  Address.touched ">
+                                    required</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3 form-group">
+                                <input type="text" id="subject" formControlName="first_name" name="subject"
+                                    class="input-text full-width" placeholder="Name">
+                                <span style="color: red;"
+                                    *ngIf="first_name && first_name.invalid &&  first_name.touched ">
+                                    required</span>
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <input type="text" id="subject" formControlName="last_name" name="subject"
+                                    class="input-text full-width" placeholder="Last Name">
+                                <span style="color: red;" *ngIf="last_name && last_name.invalid &&  last_name.touched ">
+                                    required</span>
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <input type="text" id="subject" formControlName="City" name="subject"
+                                    class="input-text full-width" placeholder="Town/City">
+                                <span style="color: red;" *ngIf="City && City.invalid &&  City.touched ">
+                                    required</span>
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <input type="text" id="subject" formControlName="state" name="subject"
+                                    class="input-text full-width" placeholder="State">
+                                <span style="color: red;" *ngIf="state && state.invalid &&  state.touched "> this feild
+                                    is
+                                    required</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <input type="text" id="subject" formControlName="phone" name="subject"
+                                    class="input-text full-width" placeholder="Mobile No.">
+                                <span style="color: red;" *ngIf="phone && phone.invalid &&  phone.touched "> this feild
+                                    is
+                                    required</span>
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <input type="text" id="subject" formControlName="zip" name="subject"
+                                    class="input-text full-width" placeholder="Zip code">
+                                <span style="color: red;" *ngIf="zip && zip.invalid &&  zip.touched ">
+                                    required</span>
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <select formControlName="country" class="full-width">
+                                    <option>United state of america</option>
+                                    <span style="color: red;" *ngIf="country && country.invalid &&  country.touched ">
+                                        required</span>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+
+                            </div>
+                            <div class="col-sm-3">
+                                <h4> <input type="checkbox" formControlName="terms" id=" " class="flexCheckDefault"
+                                        value=" "> <label class="form-check-label" for="flexCheckDefault">
+                                        Accept terms and conditions.
+                                    </label> </h4>
+                                <span style="color: red;" *ngIf="terms && terms.invalid &&  terms.touched "> this feild
+                                    is
+                                    required</span>
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <div class="form-group">
+                                    <input type="submit" id="submit" [disabled]="!becomeExpertForm.valid"
+                                        class="btn btn-lg style1" value="BECOME AN EXPERT">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -72,101 +72,113 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="icon-box style-boxed-3">
-                        <h1 class="won-time">$50</h1>
-                        <div class="box-content testimonial style1 block">
-                            <div class="testimonial-content">
-                                Popular Pack
+                        <form [formGroup]="buyPack" (ngSubmit)="buyTimePack(1,50)">
+                            <h1 class="won-time">$50</h1>
+                            <div class="box-content testimonial style1 block">
+                                <div class="testimonial-content">
+                                    Popular Pack
+                                </div>
+                                <div class="testimonial-author">
+                                    <span class="testimonial-author-name">40 Minutes</span> - <span
+                                        class="testimonial-author-job">You get forty minutes with Popular psychic
+                                        experts
+                                        who have have gone through a specialized interview process to ensure that you
+                                        can
+                                        enjoy a confidential reading with a psychic who has proven abilities and
+                                        strengths.</span><br>
+                                </div>
                             </div>
-                            <div class="testimonial-author">
-                                <span class="testimonial-author-name">40 Minutes</span> - <span
-                                    class="testimonial-author-job">You get forty minutes with Popular psychic experts
-                                    who have have gone through a specialized interview process to ensure that you can
-                                    enjoy a confidential reading with a psychic who has proven abilities and
-                                    strengths.</span><br>
-                            </div>
-                        </div>
-                        <select id="pop" name="pop" pack="50" class="droppack">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <span class="amount popamount">$51.50</span>
-                        <br><br>
-                        <input type="button" class="btn btn-sm style1" value="Buy Now">
-                        <a href="" class="btn btn-sm style1">Experts</a>
+                            <select id="pop" formControlName="val" name="pop" pack="50" class="droppack">
+                                <option selected value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <span class="amount popamount">$51.50</span>
+                            <br><br>
+                            <input type="submit" class="btn btn-sm style1" value="Buy Now">
+                            <a href="" class="btn btn-sm style1">Experts</a>
+                        </form>
+
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="icon-box style-boxed-3">
-                        <h1 class="won-time">$100</h1>
-                        <div class="box-content testimonial style1 block">
-                            <div class="testimonial-content">
-                                Preferred Pack
+                        <form [formGroup]="buyPack" (ngSubmit)="buyTimePack(2,100)">
+
+                            <h1 class="won-time">$100</h1>
+                            <div class="box-content testimonial style1 block">
+                                <div class="testimonial-content">
+                                    Preferred Pack
+                                </div>
+                                <div class="testimonial-author">
+                                    <span class="testimonial-author-name">40 Minutes</span> - <span
+                                        class="testimonial-author-job">YOU GET FORTY MINUTES WITH OUR PREFERRED PSYCHICS
+                                        EXPERTS WHO HAVE DEVELOPED A REPUTATION WITH OUR CUSTOMERS FOR PROVIDING
+                                        CONFIDENTIAL, INSIGHTFUL GUIDANCE ON MATTERS OF LOVE, RELATIONSHIPS, AND
+                                        CAREERS.</span><br>
+                                </div>
                             </div>
-                            <div class="testimonial-author">
-                                <span class="testimonial-author-name">40 Minutes</span> - <span
-                                    class="testimonial-author-job">YOU GET FORTY MINUTES WITH OUR PREFERRED PSYCHICS
-                                    EXPERTS WHO HAVE DEVELOPED A REPUTATION WITH OUR CUSTOMERS FOR PROVIDING
-                                    CONFIDENTIAL, INSIGHTFUL GUIDANCE ON MATTERS OF LOVE, RELATIONSHIPS, AND
-                                    CAREERS.</span><br>
-                            </div>
-                        </div>
-                        <select id="pop" name="pop" pack="50" class="droppack">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <span class="amount popamount">$103.00</span>
-                        <br><br>
-                        <input type="button" class="btn btn-sm style1" value="Buy Now">
-                        <a href="" class="btn btn-sm style1">Experts</a>
+                            <select id="pop" formControlName="val" name="pop" pack="50" class="droppack">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <span class="amount popamount">$103.00</span>
+                            <br><br>
+                            <input type="submit" class="btn btn-sm style1" value="Buy Now">
+                            <a href="" class="btn btn-sm style1">Experts</a>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="icon-box style-boxed-3">
-                        <h1 class="won-time">$200</h1>
-                        <div class="box-content testimonial style1 block">
-                            <div class="testimonial-content">
-                                Premier Pack
+                        <form [formGroup]="buyPack" (ngSubmit)="buyTimePack(3,200)">
+
+                            <h1 class="won-time">$200</h1>
+                            <div class="box-content testimonial style1 block">
+                                <div class="testimonial-content">
+                                    Premier Pack
+                                </div>
+                                <div class="testimonial-author">
+                                    <span class="testimonial-author-name">40 Minutes</span> - <span
+                                        class="testimonial-author-job">YOU GET FORTY MINUTES WITH OUR PREMIER PSYCHICS
+                                        EXPERTS WHO ARE MOST POPULAR PSYCHICS FOR A REASON – THEY'LL PROVIDE YOU WITH
+                                        THE
+                                        NEEDED SUPPORTIVE INSIGHT TO HELP YOU TAKE THE NEXT STEP FORWARD IN LIFE WITH
+                                        CONFIDENCE.</span><br>
+                                </div>
                             </div>
-                            <div class="testimonial-author">
-                                <span class="testimonial-author-name">40 Minutes</span> - <span
-                                    class="testimonial-author-job">YOU GET FORTY MINUTES WITH OUR PREMIER PSYCHICS
-                                    EXPERTS WHO ARE MOST POPULAR PSYCHICS FOR A REASON – THEY'LL PROVIDE YOU WITH THE
-                                    NEEDED SUPPORTIVE INSIGHT TO HELP YOU TAKE THE NEXT STEP FORWARD IN LIFE WITH
-                                    CONFIDENCE.</span><br>
-                            </div>
-                        </div>
-                        <select id="pop" name="pop" pack="50" class="droppack">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <span class="amount popamount">$206.00</span>
-                        <br><br>
-                        <input type="button" class="btn btn-sm style1" value="Buy Now">
-                        <a href="" class="btn btn-sm style1">Experts</a>
+                            <select id="pop" formControlName="val" name="pop" pack="50" class="droppack">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <span class="amount popamount">$206.00</span>
+                            <br><br>
+                            <input type="submit" class="btn btn-sm style1" value="Buy Now">
+                            <a href="" class="btn btn-sm style1">Experts</a>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -178,3 +190,28 @@
         padding: 12px 83px 12px 101px !important;
     }
 </style>
+<script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+
+        $(".droppack").change(function () {
+            var id = $(this).attr("id");
+            var pack = $(this).attr("pack");
+            var val = $("#" + id).val();
+            var packval = ((val * pack)) + (val * pack) * 3 / 100;
+            $("." + id + "amount").html("$" + Math.round(packval, 0));
+
+        });
+    });
+
+    // copy this also for news    
+    setTimeout(function () {
+        $(".panel-group").find("[href='#acc1-2']").removeClass("active");
+        $("#acc1-2").removeClass("in");
+    }, 1500);
+
+     // copy and paste news script below page upto this line
+
+</script>

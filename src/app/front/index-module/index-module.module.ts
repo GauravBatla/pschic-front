@@ -6,6 +6,7 @@ import { IndexDashboardComponent } from './index-dashboard/index-dashboard.compo
 import { PopularExpertsComponent } from './popular-experts/popular-experts.component';
 import { SliderComponent } from 'src/app/components/slider/slider.component';
 import { LiveChatComponent } from 'src/app/components/live-chat/live-chat.component';
+import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
 // import { SliderComponent } from './slider/slider.component';
 
 
@@ -20,9 +21,11 @@ import { LiveChatComponent } from 'src/app/components/live-chat/live-chat.compon
   ],
   imports: [
     CommonModule,
+    // LiveChatComponent,
     IndexModuleRoutingModule,
+    SharedComponentsModule
     // LiveChatComponent
-
+    
   ]
 })
 export class IndexModuleModule { }

@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { HttpHeaders } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit, AfterContentChecked, AfterContent
     otp: new FormControl(null, [Validators.required])
   })
 
-  constructor(private authService: AuthService, private roter: Router) { }
+  constructor(private authService: AuthService, private router: Router, private cookieService: CookieService) { }
 
   ngOnInit(): void {
   }
@@ -31,14 +32,7 @@ export class LoginComponent implements OnInit, AfterContentChecked, AfterContent
   }
 
   ngAfterContentChecked() {
-    // contentChild is updated after the content has been checked
-    // if (this.prevHero === this.contentChild.hero) {
-    // this.logIt('AfterContentChecked (no change)');
-    // } else {
-    // this.prevHero = this.contentChild.hero;
-    // this.logIt('AfterContentChecked');
-    // this.doSomething();
-    // }
+
   }
 
   login() {
@@ -61,9 +55,17 @@ export class LoginComponent implements OnInit, AfterContentChecked, AfterContent
       // console.log(this.otpForm.value);
       this.authService.verifyOtp(this.otpForm.value).subscribe((res: any) => {
         let token = res.token
+        let option = res.option
+
         localStorage.setItem('token', token);
-        // this.roter.navigate(['/'])
-        this.roter.navigate(['/'])
+        this.cookieService.set('fax', option.id)
+        this.cookieService.set('email', option.email)
+        this.cookieService.set('user_stats', option.User_Type)
+        this.cookieService.set('screen_name', option.screen_name)
+        this.cookieService.set('fax', option.fax)
+        //  this.cookieService.set('fax',option.user_id)
+        window.location.href = '/'
+
         console.log(res);
 
         if (res) {

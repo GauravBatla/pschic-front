@@ -13,12 +13,16 @@ const routes: Routes = [
     loadChildren: () => import('./experts/experts.module').then(m => m.ExpertsModule)
   },
   {
-    path:"terms-conditions",
-    loadChildren:()=>import('./terms-conditions/terms-conditions.module').then(m=>m.TermsConditionsModule)
+    path: "terms-conditions",
+    loadChildren: () => import('./terms-conditions/terms-conditions.module').then(m => m.TermsConditionsModule)
   },
   {
-    path:"cart",
-    loadChildren:()=>import('./cart/cart.module').then(m=>m.CartModule)
+    path: "cart",
+    loadChildren: () => import('./cart/cart.module').then(m => m.CartModule)
+  },
+  {
+    path: "expert-signUp",
+    loadChildren: () => import('./expert-sign-up/expert-sign-up.module').then(m => m.ExpertSignUpModule)
   }
   // {
   //   path:"login",

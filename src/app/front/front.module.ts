@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularMaterialUi } from 'src/angular-material/angular.material.module';
+import { SharedComponentsModule } from '../shared-components/shared-components.module';
 // import { HeaderComponent } from './header/header.component';
 // import { FooterComponent } from './footer/footer.component';
 // import { ChatUsComponent } from '../chat-us/chat-us.component';
@@ -21,6 +22,7 @@ import { AngularMaterialUi } from 'src/angular-material/angular.material.module'
     CommonModule,
     FrontRoutingModule,
     AngularMaterialUi,
+    SharedComponentsModule,
     FormsModule,
     ReactiveFormsModule ,
     BrowserModule,

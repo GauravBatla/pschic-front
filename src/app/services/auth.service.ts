@@ -96,12 +96,33 @@ export class AuthService {
     return this._http.delete('web/delete-cart/' + id)
   }
 
-  pay(data:any){
-    return this._http.post('web/pay',data)
+  pay(data: any) {
+    return this._http.post('web/pay', data)
   }
 
-  payAf(data:any){
-    return this._http.post('web/purchase',data)
+  payAf(data: any) {
+    return this._http.post('web/purchase', data)
+  };
+  expertPay(data: any) {
+    return this._http.post('web/expert-pay', data)
+  };
+
+  // buy time pack
+  buyTimePack(pt: Number, val: Number, price: Number) {
+    return this._http.get(`web/time-pack?packType=${pt}&val=${val}&price=${price}`)
+  };
+
+
+  // get transactions
+  getAccountBalance() {
+    return this._http.get('web/getBalance')
+  }
+
+  getTransActions(data: any) {
+    return this._http.post('web/transAction', data)
+  }
+  expertSignUp(data: any) {
+    return this._http.put('web/expert-signup', data)
   }
   get nativeWindow(): any {
     return _window();
